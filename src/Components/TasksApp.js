@@ -36,7 +36,7 @@ export default class TasksApp extends Component {
     render() {
         return (
             <div>
-                <h1>Tasks Todo</h1>
+                <h1>To-do list</h1>
                 <TaskList tasks={this.state.tasks} deleteTask={this.deleteTask} editTask={this.editTask} changeStatus={this.changeStatus}/>
                 <TaskInput createTask={this.createTask}/>
             </div>
