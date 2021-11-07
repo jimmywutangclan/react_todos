@@ -51,6 +51,6 @@ input, button {
 }
 
 .completed {
-  text-align: center;
+  text-decoration: line-through;
 }
 
