@@ -7,9 +7,14 @@ export default class TaskList extends Component {
         const taskList = this.props.tasks;
         const htmlList = taskList.map((task, index) => <TaskItem task={task} index={index} deleteTask={this.props.deleteTask} editTask={this.props.editTask} changeStatus={this.props.changeStatus}/>);
         return (
-            <div>
+            <table>
+                <tr>
+                    <th>Completed?</th>
+                    <th>Task</th>
+                    <th>Options</th>
+                </tr>
                 {htmlList}
-            </div>
+            </table>
         );
     }
 }

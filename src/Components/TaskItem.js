@@ -32,20 +32,21 @@ export default class TaskItem extends Component {
 
     render() {
         return (
-            <div>
-                <h2>{this.props.task.task}</h2>
-                {this.props.task.completed ? <h3>(Done)</h3> : null}
-                <label>
-                    Completed?
-                    <input type="checkbox" checked={this.props.task.completed} onChange={this.changeStatus}></input>
-                </label>
-                {this.state.editing ? <form onSubmit={this.submitChanges}>
-                    <input type="text" value={this.state.task} onChange={this.editChange}></input>
-                    <button type="submit">Submit edit</button>
-                </form> : null }
-                <button onClick={this.deleteItem}>Delete</button>
-                <button onClick={this.toggleEdit}>Edit</button>
-            </div>
+            <tr>
+                <td>
+                    <label>
+                        <input type="checkbox" checked={this.props.task.completed} onChange={this.changeStatus}></input>
+                    </label>
+                </td>
+                <td>
+                    {this.state.editing ? <form onSubmit={this.submitChanges}>
+                        <input type="text" value={this.state.task} onChange={this.editChange}></input>
+                        <button type="submit">Submit edit</button>
+                    </form> : <h3 className={this.props.task.completed ? 'completed' : 'not-completed'}>{this.props.task.task}</h3> }
+                </td>
+                <td><button onClick={this.toggleEdit}>Edit</button></td>
+                <td><button onClick={this.deleteItem}>Delete</button></td>
+            </tr>
         )
     }
 }
