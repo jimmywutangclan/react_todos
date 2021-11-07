@@ -11,3 +11,46 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.main {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+.content {
+  border: 5px black solid;
+  border-radius: 5px;
+  background-color: gainsboro;
+}
+
+table {
+  width: 100%;
+}
+
+td:last-child {
+  min-width: 125px;
+}
+
+th {
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: beige;
+}
+
+tr:nth-child(odd) {
+  background-color: gray;
+}
+
+input, button {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px black;
+}
+
+.completed {
+  text-align: center;
+}
+
