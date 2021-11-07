@@ -44,8 +44,10 @@ export default class TaskItem extends Component {
                         <button type="submit">Submit edit</button>
                     </form> : <h3 className={this.props.task.completed ? 'completed' : 'not-completed'}>{this.props.task.task}</h3> }
                 </td>
-                <td><button onClick={this.toggleEdit}>Edit</button></td>
-                <td><button onClick={this.deleteItem}>Delete</button></td>
+                <td>
+                    <button onClick={this.toggleEdit}>Edit</button>
+                    <button onClick={this.deleteItem}>Delete</button>
+                </td>
             </tr>
         )
     }
