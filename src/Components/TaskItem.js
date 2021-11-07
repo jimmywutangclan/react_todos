@@ -37,7 +37,7 @@ export default class TaskItem extends Component {
                 {this.props.task.completed ? <h3>(Done)</h3> : null}
                 <label>
                     Completed?
-                    <input type="checkbox" onChange={this.changeStatus}></input>
+                    <input type="checkbox" checked={this.props.task.completed} onChange={this.changeStatus}></input>
                 </label>
                 {this.state.editing ? <form onSubmit={this.submitChanges}>
                     <input type="text" value={this.state.task} onChange={this.editChange}></input>
